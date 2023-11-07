@@ -14,6 +14,7 @@ DB = mysql.connector.connect(
 
 cursor = DB.cursor()
 
+# Commit
 '''
 Query all employee records from the employee table
 And query employee with condition, emp_num > 101
