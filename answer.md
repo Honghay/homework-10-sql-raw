@@ -1,7 +1,7 @@
 
 
-<!-- 1 -->
 
+1
 
 sql="INSERT INTO employee (emp_num, emp_lname, emp_fname, emp_initial, emp_hiredate, job_code) VALUES(%s, %s, %s, %s, %s, %s)"
 current_date = datetime.now()
@@ -13,8 +13,7 @@ DB.commit()
 
 print(cursor.rowcount, "Successfully added.") 
 
-
-<!-- 2 -->
+2
 
 sql = """
     SELECT E.EMP_NUM, E.EMP_FNAME, E.EMP_LNAME, E.EMP_INITIAL, jb.JOB_DESCRIPTION, jb.JOB_CHG_HOUR, E.EMP_HIREDATE FROM EMPLOYEE AS E 
@@ -26,7 +25,7 @@ cursor.execute(sql)
 result = cursor.fetchone()
 
 
-<!-- 3 -->
+3
 
 update_sql = """
     UPDATE employee
@@ -39,7 +38,7 @@ DB.commit()
 print(cursor.rowcount, "Successfully updated.") 
 
 
-<!-- 4 -->
+4
 
 sql = """
     SELECT P.PROJ_NUM, P.PROJ_NAME, E.EMP_FNAME,E.EMP_LNAME FROM PROJECT AS P
@@ -55,7 +54,8 @@ result = cursor.fetchall()
 print(result)
 
 
-<!-- 5 -->
+5
+
 delete_sql = "DELETE FROM employee WHERE EMP_NUM = 168;"
 
 cursor.execute(delete_sql)
